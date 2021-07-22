@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="student" class="pojo.Student">
+        <!--普通值注入-->
+        <property name="name" value="dxy"/>
+        <!--bean注入-->
+        <property name="address" ref="address"/>
+        <!--数组注入-->
+        <property name="books">
+            <array>
+                <value>书1</value>
+                <value>书2</value>
+                <value>书3</value>
+            </array>
+        </property>
+        <!--list注入-->
+        <property name="hobbys">
+            <list>
+                <value>hobby1</value>
+                <value>hobby2</value>
+                <value>hobby3</value>
+            </list>
+        </property>
+        <!--map注入-->
+        <property name="card">
+            <map>
+                <entry key="k1" value="v1"/>
+                <entry key="k2" value="v2"/>
+            </map>
+        </property>
+        <!--set注入-->
+        <property name="game">
+            <set>
+                <value>game1</value>
+                <value>game2</value>
+            </set>
+        </property>
+        <!--null注入-->
+        <property name="wife">
+            <null/>
+        </property>
+        <!--Properties-->
+        <property name="info">
+            <props>
+                <prop key="p1">v1</prop>
+                <prop key="p2">v2</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="address" class="pojo.Address"/>
+</beans>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--p命名空间注入，可以直接注入属性-->
+    <bean id="user" class="pojo.User" p:name="名字" p:age="19"/>
+    <!--c命名空间注入，通过构造器注入-->
+    <bean id="user2" class="pojo.User" c:name="参数构造" c:age="15"/>
+
+    <!--
+    scope:作用域
+        singleton:单例，默认，获取的bean永远是一个
+        prototype:原形模式，每次获取的bean为新创建的
+    -->
+    <bean id="userSingleton" class="pojo.User" scope="singleton"/>
+    <bean id="userPrototype" class="pojo.User" scope="prototype"/>
+
+</beans>
