@@ -11,7 +11,8 @@
     <modules>
         <module>spring3</module>
         <module>spring4</module>
-        <module>spring4</module>
+        <module>spring5</module>
+        <module>spring6</module>
     </modules>
 
     <dependencies>

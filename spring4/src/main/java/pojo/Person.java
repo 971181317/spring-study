@@ -28,4 +28,13 @@ public class Person {
     public void setDog(Dog dog) {
         this.dog = dog;
     }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "cat=" + cat +
+                ", dog=" + dog +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
