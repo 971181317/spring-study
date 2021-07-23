@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--
+        id:唯一标识符
+        class：类名
+        name：别名，比alias标签好用，可以起多个别名
+    -->
+<!--    直接通过参数名赋值-->
+    <bean id="hello" class="pojo.Hello" name="hello2, hello3">
+        <constructor-arg name="name" value="参数名赋值"/>
+    </bean>
+
+    <!--import 导入其他的xml-->
+    <import resource="bean.xml"/>
+
+    <!--下标赋值-->
+    <!--<bean id="hello" class="pojo.Hello">-->
+    <!--<constructor-arg index="0" value="下标赋值"/>-->
+    <!--</bean>-->
+
+    <!--类型赋值，不建议使用，相同属性会出错-->
+    <!--    <bean id="hello" class="pojo.Hello">-->
+    <!--        <constructor-arg type="java.lang.String" value="类型赋值"/>-->
+    <!--    </bean>-->
+</beans>
